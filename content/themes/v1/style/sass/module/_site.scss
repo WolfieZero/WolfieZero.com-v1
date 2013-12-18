@@ -1,0 +1,90 @@
+
+// ============================================================================
+// Site
+// ============================================================================
+
+.site {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+
+// ----------------------------------------------------------------------------
+// Site Header
+// ----------------------------------------------------------------------------
+
+.site-header {
+    @extend .site;
+    background: $color-brand;
+
+    & > .container {
+        @include outer-container;
+    }
+
+
+    .img-logo {
+        background-size: contain;
+
+        @include shift( 0.5 );
+
+    }
+
+}
+
+
+    // ------------------------------------------------------------------------
+    // Site Header - Home
+    // ------------------------------------------------------------------------
+    .site-header--home {
+        height: auto;
+
+        .img-logo {
+            @include span-columns( 2 );
+            @include media( $mobile ) {
+                height: 100px;
+                position: relative;
+                display: block;
+                float: none;
+                margin-right: auto;
+                margin-left: auto;
+                margin-bottom: 1em;
+            }
+
+        }
+
+    }
+
+
+// ----------------------------------------------------------------------------
+// Site: Body
+// ----------------------------------------------------------------------------
+
+.site-body {
+    @extend .site;
+    margin-top: golden-ratio(1em, 1);
+    margin-bottom: golden-ratio(1em, 1);
+}
+
+
+// ----------------------------------------------------------------------------
+// Site: Footer
+// ----------------------------------------------------------------------------
+
+.site-footer {
+    @extend .site;
+    clear: both;
+    color: #444;
+    text-align: center;
+
+    a {
+        margin-left: 1em;
+        color: inherit;
+    }
+
+    span {
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+}

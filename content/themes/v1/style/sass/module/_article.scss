@@ -1,0 +1,67 @@
+
+// ============================================================================
+// Article
+// ============================================================================
+
+
+// ----------------------------------------------------------------------------
+// Aritcles
+// ----------------------------------------------------------------------------
+
+.articles {
+    @include outer-container;
+}
+
+    .articles-item {
+        position: relative;
+        margin-top: golden-ratio( 1em, 1 );
+
+        @include shift( 1 );
+        @include span-columns( 10 );
+        @include media( max-width 720px ) {
+            @include shift( 1 );
+            @include span-columns( 10 );
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        & > h2 {
+            font-weight: 100;
+            margin-bottom: 0;
+
+            @include span-columns( 8 of 10 );
+            @include shift( 2 );
+
+        }
+
+        & > .article__meta {
+//            font-size: 0.8em;
+            margin-top: 0;
+            color: tint( $color-background, 20% );
+            position: absolute;
+            top: 0;
+            text-align: right;
+
+            @include span-columns( 2 of 10 );
+            @include shift( 0 );
+
+        }
+
+    }
+
+
+// ----------------------------------------------------------------------------
+// Aritcle
+// ----------------------------------------------------------------------------
+
+.article {
+
+}
+
+    .article__meta {
+        & > abbr {
+            border-bottom-style: none;
+        }
+    }

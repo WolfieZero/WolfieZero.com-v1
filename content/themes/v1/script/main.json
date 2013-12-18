@@ -1,0 +1,10 @@
+{
+
+    "script/dist/main.js": [
+
+        "script/dev/vendor/zepto.js",
+        "script/dev/main.js"
+
+    ]
+
+}

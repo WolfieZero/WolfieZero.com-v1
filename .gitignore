@@ -1,0 +1,41 @@
+# =============================================================================
+# Ignored Files
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# Main
+# -----------------------------------------------------------------------------
+
+/content/uploads/
+/content/cache/
+/content/vendor/
+node_modules/
+/vendor/
+/wp/
+.sass-cache/
+.DS_Store
+composer.lock
+composer.phar
+wp-local-config.php
+
+
+# -----------------------------------------------------------------------------
+# Plugins
+# -----------------------------------------------------------------------------
+# Plugins should be managed by Composer, but if you have a folder/file that you
+# want managed in the main repo then make sure you un-ingore it here.
+
+# Don't ignore the folder
+!/content/plugins/
+
+# Ignore everything in the folder by default
+/content/plugins/*
+
+# Don't ingore the following
+!/content/plugins/Auto-DFP/
+!/content/plugins/fubra-passport/
+!/content/plugins/simply-poll-passport/
+!/content/plugins/simply-survey-passport/
+!/content/plugins/WP-PetrolPrices/
+!/content/plugins/permalink-editor/

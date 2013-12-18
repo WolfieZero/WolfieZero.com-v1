@@ -1,0 +1,74 @@
+
+// ============================================================================
+// Social
+// ============================================================================
+
+.social {
+
+    @include media( max-width 720px ) {
+        text-align: center;
+    }
+
+}
+
+// ----------------------------------------------------------------------------
+// Icons
+// ----------------------------------------------------------------------------
+
+.social__ico {
+    display: inline-block;
+    @include size( 48px );
+    @include transition( all 0.3s ease );
+}
+
+
+// ----------------------------------------------------------------------------
+// Mixin
+// ----------------------------------------------------------------------------
+
+@mixin make-icon( $icon, $background ) {
+
+    .social__ico--#{$icon}-bg {
+        @extend .social__ico;
+
+        background-color: $background;
+        opacity: 0.75;
+        font-size: 0;
+
+        @include transform( rotate( 45deg ) );
+
+        &:hover {
+            opacity: 1;
+            @include transform( rotate( 0deg ) );
+        }
+
+    }
+
+    .social__ico--#{$icon} {
+        @extend .social__ico;
+
+        background-image: url('#{$dir-img}/icons/#{$icon}/#{$icon}-48.png');
+
+        @include transform( rotate( -45deg ) );
+
+        &:hover {
+            opacity: 1;
+            @include transform( rotate( 0deg ) );
+        }
+
+    }
+
+}
+
+
+// ----------------------------------------------------------------------------
+// Icons
+// ----------------------------------------------------------------------------
+
+@include make-icon( 'twitter',  #00ACED );
+@include make-icon( 'github',   #777777 );
+@include make-icon( 'flickr',   #4183C4 );
+@include make-icon( 'linkedin', #007FB1 );
+@include make-icon( 'lastfm',   #D51007 );
+@include make-icon( 'aboutme',  #EAB233 );
+

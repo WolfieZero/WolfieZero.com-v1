@@ -1,0 +1,37 @@
+{
+    "name":        "wolfiezero/wp-kickstart",
+    "description": "Kickstart your WordPress site",
+    "type":        "project",
+    "license":     "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url" : "http://wpackagist.org"
+        }
+    ],
+    "config": {
+        "vendor-dir": "content/vendor"
+    },
+    "require": {
+        "johnpbloch/wordpress": "*",
+        "wpackagist/wp-super-cache": "*",
+        "wpackagist/wordpress-importer": "*",
+        "wpackagist/google-analytics-for-wordpress": "*"
+    },
+    "require-dev"  : {
+        "wpackagist/developer": "*",
+        "wpackagist/debug-bar": "*",
+        "wpackagist/debug-bar-console": "*",
+        "wpackagist/log-deprecated-notices": "*",
+        "wpackagist/log-viewer": "*",
+        "wpackagist/theme-check": "*",
+        "wpackagist/simply-show-ids": "*"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "content/plugins/{$name}"   : ["type:wordpress-plugin"],
+            "content/themes/{$name}"    : ["type:wordpress-theme"]
+        }
+    }
+}

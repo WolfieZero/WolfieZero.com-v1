@@ -1,0 +1,10 @@
+
+@mixin center-this () {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+@mixin ir( $w, $h ) {
+    @include hide-text;
+}

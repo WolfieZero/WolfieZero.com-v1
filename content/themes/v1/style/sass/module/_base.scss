@@ -1,0 +1,19 @@
+
+// ============================================================================
+// Base
+// ============================================================================
+
+
+html {
+    background: $color-background;
+    font-size: $em-base;
+}
+
+.top-bar {
+    border: 0;
+    border-top: 5px solid $color-brand;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+}
