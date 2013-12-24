@@ -24,13 +24,18 @@
 
     background-image: url('#{$dir-img}/logo.png');
 
-    @include size(160px);
-    @include hidpi(1.5) {
+    @include size( 160px );
+    @include hidpi( 1.5 ) {
         background-image: url('#{$dir-img}/logo@2x.png');
     }
 
 }
 
-.img-logo--small {
-    @include size(40px);
-}
+
+    // ------------------------------------------------------------------------
+    // Small
+    // ------------------------------------------------------------------------
+
+    .img-logo--small {
+        @include size( 40px );
+    }

@@ -439,7 +439,7 @@ html {
 html {
   font-size: 18px;
   color: #EEE;
-  font-family: 'Open Sans';
+  font-family: Ubuntu, serif;
   font-weight: 100; }
 
 h1 {
@@ -494,6 +494,22 @@ a {
   a:hover {
     color: #cc0099; }
 
+.menu {
+  padding: 0;
+  margin: 0; }
+  .menu > li {
+    display: inline-block; }
+
+.nav-main {
+  display: block;
+  float: left;
+  margin-right: 2.12766%;
+  width: 82.97872%; }
+  .nav-main:last-child {
+    margin-right: 0; }
+  .nav-main a {
+    color: #333; }
+
 .blurb {
   font-family: SansationLight;
   font-size: 1.2em;
@@ -503,7 +519,7 @@ a {
   float: left;
   margin-right: 2.12766%;
   width: 65.95745%;
-  margin-left: 4.25532%; }
+  margin-left: 0%; }
   .blurb:last-child {
     margin-right: 0; }
   @media screen and (max-width: 850px) {
@@ -518,213 +534,168 @@ a {
       .blurb h1 {
         text-align: center; } }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 850px) {
   .social {
     text-align: center; } }
 
-.social__ico, .social__ico--twitter-bg, .social__ico--twitter, .social__ico--github-bg, .social__ico--github, .social__ico--flickr-bg, .social__ico--flickr, .social__ico--linkedin-bg, .social__ico--linkedin, .social__ico--lastfm-bg, .social__ico--lastfm, .social__ico--aboutme-bg, .social__ico--aboutme {
+.social__ico, .social__ico--twitter-bg, .social__ico--twitter, .social__ico--github-bg, .social__ico--github, .social__ico--flickr-bg, .social__ico--flickr, .social__ico--linkedin-bg, .social__ico--linkedin, .social__ico--youtube-bg, .social__ico--youtube, .social__ico--instagram-bg, .social__ico--instagram, .social__ico--codeschool-bg, .social__ico--codeschool {
   display: inline-block;
-  width: 48px;
-  height: 48px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  width: 48px;
+  height: 48px; }
 
 .social__ico--twitter-bg {
-  background-color: #00aced;
-  opacity: 0.75;
-  font-size: 0;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
+  overflow: hidden;
+  background-color: #222;
+  border: 3px solid #222; }
   .social__ico--twitter-bg:hover {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    background-color: #00aced; }
 
 .social__ico--twitter {
-  background-image: url("../../img/icons/twitter/twitter-48.png");
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
+  font-size: 0;
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg); }
   .social__ico--twitter:hover {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    color: #eee; }
+  .social__ico--twitter:before {
+    margin-left: 2px;
+    line-height: 55px;
+    font-size: 50px; }
 
 .social__ico--github-bg {
-  background-color: #777777;
-  opacity: 0.75;
-  font-size: 0;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
+  overflow: hidden;
+  background-color: #222;
+  border: 3px solid #222; }
   .social__ico--github-bg:hover {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    background-color: #4183c4; }
 
 .social__ico--github {
-  background-image: url("../../img/icons/github/github-48.png");
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
+  font-size: 0;
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg); }
   .social__ico--github:hover {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    color: #eee; }
+  .social__ico--github:before {
+    margin-left: 2px;
+    line-height: 55px;
+    font-size: 50px; }
 
 .social__ico--flickr-bg {
-  background-color: #4183c4;
-  opacity: 0.75;
-  font-size: 0;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
+  overflow: hidden;
+  background-color: #222;
+  border: 3px solid #222; }
   .social__ico--flickr-bg:hover {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    background-color: #4183c4; }
 
 .social__ico--flickr {
-  background-image: url("../../img/icons/flickr/flickr-48.png");
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
+  font-size: 0;
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg); }
   .social__ico--flickr:hover {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    color: #eee; }
+  .social__ico--flickr:before {
+    margin-left: 2px;
+    line-height: 55px;
+    font-size: 50px; }
 
 .social__ico--linkedin-bg {
-  background-color: #007fb1;
-  opacity: 0.75;
-  font-size: 0;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
+  overflow: hidden;
+  background-color: #222;
+  border: 3px solid #222; }
   .social__ico--linkedin-bg:hover {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    background-color: #007fb1; }
 
 .social__ico--linkedin {
-  background-image: url("../../img/icons/linkedin/linkedin-48.png");
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
+  font-size: 0;
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg); }
   .social__ico--linkedin:hover {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
+    color: #eee; }
+  .social__ico--linkedin:before {
+    margin-left: 2px;
+    line-height: 55px;
+    font-size: 50px; }
 
-.social__ico--lastfm-bg {
-  background-color: #d51007;
-  opacity: 0.75;
+.social__ico--youtube-bg {
+  overflow: hidden;
+  background-color: #222;
+  border: 3px solid #222; }
+  .social__ico--youtube-bg:hover {
+    background-color: #cd332d; }
+
+.social__ico--youtube {
   font-size: 0;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
-  .social__ico--lastfm-bg:hover {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg); }
+  .social__ico--youtube:hover {
+    color: #eee; }
+  .social__ico--youtube:before {
+    margin-left: 2px;
+    line-height: 55px;
+    font-size: 50px; }
 
-.social__ico--lastfm {
-  background-image: url("../../img/icons/lastfm/lastfm-48.png");
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
-  .social__ico--lastfm:hover {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
+.social__ico--instagram-bg {
+  overflow: hidden;
+  background-color: #222;
+  border: 3px solid #222; }
+  .social__ico--instagram-bg:hover {
+    background-color: #3f729b; }
 
-.social__ico--aboutme-bg {
-  background-color: #eab233;
-  opacity: 0.75;
+.social__ico--instagram {
   font-size: 0;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
-  .social__ico--aboutme-bg:hover {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg); }
+  .social__ico--instagram:hover {
+    color: #eee; }
+  .social__ico--instagram:before {
+    margin-left: 2px;
+    line-height: 55px;
+    font-size: 50px; }
 
-.social__ico--aboutme {
-  background-image: url("../../img/icons/aboutme/aboutme-48.png");
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
-  .social__ico--aboutme:hover {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
+.social__ico--codeschool-bg {
+  overflow: hidden;
+  background-color: #222;
+  border: 3px solid #222; }
+  .social__ico--codeschool-bg:hover {
+    background-color: #c68044; }
+
+.social__ico--codeschool {
+  font-size: 0;
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  transform: rotate(-25deg); }
+  .social__ico--codeschool:hover {
+    color: #eee; }
+  .social__ico--codeschool:before {
+    margin-left: 2px;
+    line-height: 55px;
+    font-size: 50px; }
 
 .articles {
   *zoom: 1;
-  max-width: 60em;
+  max-width: 62.5em;
   margin-left: auto;
   margin-right: auto; }
   .articles:before, .articles:after {
@@ -752,11 +723,10 @@ a {
       width: 82.97872%; }
       .articles-item:last-child {
         margin-right: 0; } }
-  .articles-item:last-child {
-    border-bottom: 0; }
   .articles-item > h2 {
     font-weight: 100;
     margin-bottom: 0;
+    -webkit-backface-visibility: hidden;
     display: block;
     float: left;
     margin-right: 2.5641%;
@@ -764,6 +734,15 @@ a {
     margin-left: 20.51282%; }
     .articles-item > h2:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 720px) {
+      .articles-item > h2 {
+        display: block;
+        float: left;
+        margin-right: 2.5641%;
+        width: 100%;
+        margin-left: 0%; }
+        .articles-item > h2:last-child {
+          margin-right: 0; } }
   .articles-item > .article__meta {
     margin-top: 0;
     color: #4e4e4e;
@@ -777,19 +756,30 @@ a {
     margin-left: 0%; }
     .articles-item > .article__meta:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 720px) {
+      .articles-item > .article__meta {
+        position: relative;
+        text-align: left;
+        display: block;
+        float: left;
+        margin-right: 2.5641%;
+        width: 100%;
+        margin-left: 0%; }
+        .articles-item > .article__meta:last-child {
+          margin-right: 0; } }
 
 .article__meta > abbr {
   border-bottom-style: none; }
 
 .site, .site-header, .site-body, .site-footer {
-  padding-top: 2em;
-  padding-bottom: 2em; }
+  padding-top: 1em;
+  padding-bottom: 1em; }
 
 .site-header {
   background: #b53f87; }
   .site-header > .container {
     *zoom: 1;
-    max-width: 60em;
+    max-width: 62.5em;
     margin-left: auto;
     margin-right: auto; }
     .site-header > .container:before, .site-header > .container:after {
@@ -799,7 +789,22 @@ a {
       clear: both; }
   .site-header .img-logo {
     background-size: contain;
-    margin-left: 4.25532%; }
+    margin-left: 8.51064%;
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 6.38298%; }
+    .site-header .img-logo:last-child {
+      margin-right: 0; }
+
+.site-header__title {
+  display: block;
+  float: left;
+  margin-right: 2.12766%;
+  width: 65.95745%;
+  margin-left: 17.02128%; }
+  .site-header__title:last-child {
+    margin-right: 0; }
 
 .site-header--home {
   height: auto; }
@@ -834,7 +839,7 @@ a {
   .site-footer span:first-child {
     margin-left: 0; }
 
-.list--un-styled > li {
+.list--un-styled > li, .menu > li {
   margin: 0;
   list-style: none; }
 
@@ -850,7 +855,7 @@ a {
   background: #b53f87; }
   .single--header > .pad {
     *zoom: 1;
-    max-width: 60em;
+    max-width: 62.5em;
     margin-left: auto;
     margin-right: auto; }
     .single--header > .pad:before, .single--header > .pad:after {
@@ -869,7 +874,7 @@ a {
 
 .single--content {
   *zoom: 1;
-  max-width: 60em;
+  max-width: 62.5em;
   margin-left: auto;
   margin-right: auto; }
   .single--content:before, .single--content:after {
@@ -879,8 +884,6 @@ a {
     clear: both; }
   .single--content p {
     text-align: justify; }
-    .single--content p:first-child {
-      font-weight: 600; }
   .single--content > .pad {
     margin-top: 2em;
     margin-left: 17.02128%;

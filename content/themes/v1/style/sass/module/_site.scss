@@ -4,8 +4,8 @@
 // ============================================================================
 
 .site {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 
@@ -25,11 +25,17 @@
     .img-logo {
         background-size: contain;
 
-        @include shift( 0.5 );
+        @include shift( 1 );
+        @include span-columns( 1 );
 
     }
 
 }
+
+    .site-header__title {
+        @include span-columns( 8 );
+        @include shift( 2 );
+    }
 
 
     // ------------------------------------------------------------------------

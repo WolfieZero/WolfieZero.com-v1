@@ -23,16 +23,20 @@
             @include span-columns( 10 );
         }
 
-        &:last-child {
-            border-bottom: 0;
-        }
-
         & > h2 {
             font-weight: 100;
             margin-bottom: 0;
+            -webkit-backface-visibility: hidden;
 
             @include span-columns( 8 of 10 );
             @include shift( 2 );
+
+            @include media( max-width 720px ) {
+
+                @include span-columns( 10 of 10 );
+                @include shift( 0 );
+
+            }
 
         }
 
@@ -46,6 +50,16 @@
 
             @include span-columns( 2 of 10 );
             @include shift( 0 );
+
+            @include media( max-width 720px ) {
+
+                position: relative;
+                text-align: left;
+
+                @include span-columns( 10 of 10 );
+                @include shift( 0 );
+
+            }
 
         }
 

@@ -10,7 +10,7 @@
     text-align: justify;
 
     @include span-columns( 8 );
-    @include shift( 0.5 );
+    @include shift( 0 );
 
     @include media( $mobile ) {
 

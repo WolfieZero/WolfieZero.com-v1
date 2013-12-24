@@ -11,6 +11,7 @@
 // ----------------------------------------------------------------------------
 
 add_action( 'wp_enqueue_scripts', 'enqueue_files' );
+add_action( 'init', 'navigation' );
 
 
 // ----------------------------------------------------------------------------
@@ -29,7 +30,7 @@ add_filter( 'script_loader_src', 'remove_enqueued_ver', 10, 2 );
 /**
  * Enqueues both style and script files used for the theme
  *
- * @return  [type]
+ * @return  null
  */
 function enqueue_files() {
 
@@ -37,7 +38,8 @@ function enqueue_files() {
     //wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js' );
 
     // Fonts
-    wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Raleway:400,500|Open+Sans:300,400,600' );
+    wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' );
+    wp_enqueue_style( 'fontawesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' );
 
     // Main Style
     wp_enqueue_style( 'main', get_template_directory_uri() . '/style/css/main.css' );
@@ -50,6 +52,28 @@ function enqueue_files() {
 
 }
 
+
+/**
+ * Navigation for the theme
+ *
+ * @return  null
+ */
+function navigation() {
+
+    register_nav_menus( array(
+        'header' => 'Header'
+    ) );
+
+}
+
+
+/**
+ * Removes version numbers from enqued files (supresses query strings)
+ *
+ * @param   string  $src  Source URL
+ *
+ * @return  string
+ */
 function remove_enqueued_ver( $src ) {
 
     if( strpos( $src, '?ver=' ) || strpos( $src, '&ver=' ) )

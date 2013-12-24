@@ -52,9 +52,10 @@ $module: 'single';
 
     p {
         text-align: justify;
-        &:first-child {
-            font-weight: 600;
-        }
+        //&:first-child {
+        //    line-height: 1.8em;
+        //    font-weight: 700;
+        //}
     }
 
     & > .pad {
