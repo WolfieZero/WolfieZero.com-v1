@@ -18,7 +18,7 @@ get_header(); ?>
                 <a href="http://twitter.com/WolfieZero" rel="external" class="social__ico--twitter-bg">
                     <i class="fa fa-twitter social__ico--twitter">Twitter</i></a>
                 <a href="http://github.com/WolfieZero" rel="extenal" class="social__ico--github-bg">
-                    <i class="fa fa-github social__ico--github">Github</i></a>
+                    <i class="fa fa-github-alt social__ico--github">Github</i></a>
                 <a href="http://www.flickr.com/photos/wolfiezero/" rel="external" class="social__ico--flickr-bg">
                     <i class="fa fa-flickr social__ico--flickr">Flickr</i></a>
                 <a href="http://uk.linkedin.com/in/neilsweeney/" rel="external" class="social__ico--linkedin-bg">

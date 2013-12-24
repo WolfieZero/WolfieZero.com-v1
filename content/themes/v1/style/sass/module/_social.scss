@@ -40,8 +40,8 @@
     .social__ico--#{$icon} {
         @extend .social__ico;
 
-            font-size: 0;
-            @include transform( rotate( -25deg ) );
+        font-size: 0;
+        @include transform( rotate( -25deg ) );
         //background-image: url('#{$dir-img}/icons/#{$icon}/#{$icon}-48.png');
 
         &:hover {

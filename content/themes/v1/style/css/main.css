@@ -817,13 +817,20 @@ a {
       margin-right: 0; }
     @media screen and (max-width: 850px) {
       .site-header--home .img-logo {
-        height: 100px;
+        display: block;
+        float: left;
+        margin-right: 2.12766%;
+        width: 31.91489%;
+        height: 5.55556 em;
         position: relative;
         display: block;
         float: none;
         margin-right: auto;
         margin-left: auto;
-        margin-bottom: 1em; } }
+        text-align: center;
+        margin-bottom: 1em; }
+        .site-header--home .img-logo:last-child {
+          margin-right: 0; } }
 
 .site-body {
   margin-top: 1.618em;

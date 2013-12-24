@@ -18,6 +18,7 @@ node_modules/
 composer.lock
 composer.phar
 wp-local-config.php
+npm-debug.log
 
 
 # -----------------------------------------------------------------------------
