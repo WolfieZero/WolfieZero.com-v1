@@ -1,0 +1,24 @@
+
+// ============================================================================
+// WordPress Default Styles
+// ============================================================================
+
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.size-medium {
+//    @include transform( scale(0.95) );
+//    @include transform( rotate(2deg) );
+}

@@ -22,17 +22,11 @@
         @extend .social__ico;
 
         overflow: hidden;
-
         background-color: #222;
         border: 3px solid #222;
-        //opacity: 0.75;
-
-//        @include transform( rotate( 45deg ) );
 
         &:hover {
             background-color: $background;
-            //opacity: 1;
-            //@include transform( rotate( 0deg ) );
         }
 
     }
@@ -41,11 +35,11 @@
         @extend .social__ico;
 
         font-size: 0;
+        color: $color-brand;
+
         @include transform( rotate( -25deg ) );
-        //background-image: url('#{$dir-img}/icons/#{$icon}/#{$icon}-48.png');
 
         &:hover {
-            //opacity: 1;
             color: #eee;
         }
 
@@ -70,12 +64,12 @@
     @include size( 48px );
 }
 
-@include make-icon( 'twitter',    #00ACED );
-@include make-icon( 'github',     #4183C4 );
-@include make-icon( 'flickr',     #4183C4 );
-@include make-icon( 'linkedin',   #007FB1 );
-@include make-icon( 'youtube',    #CD332D );
-@include make-icon( 'instagram',  #3F729B );
-@include make-icon( 'codeschool', #C68044 );
-
+@include make-icon( 'twitter',        #00ACED );
+@include make-icon( 'github',         #4183C4 );
+@include make-icon( 'flickr',         #4183C4 );
+@include make-icon( 'linkedin',       #007FB1 );
+@include make-icon( 'youtube',        #CD332D );
+@include make-icon( 'instagram',      #3F729B );
+@include make-icon( 'codeschool',     #C68044 );
+@include make-icon( 'stack-exchange', #1F5196 );
 

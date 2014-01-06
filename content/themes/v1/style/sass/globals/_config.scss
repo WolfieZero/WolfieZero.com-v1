@@ -8,15 +8,16 @@
 // Typography
 // ----------------------------------------------------------------------------
 
-$rem-base:         18px;
-$em-base:          $rem-base;
+$size-base:        18px;
+$rem-base:         $size-base;
+$em-base:          $size-base;
 
-$h1-font-size:     rem-calc( 44 );
-$h2-font-size:     rem-calc( 37 );
-$h3-font-size:     rem-calc( 27 );
-$h4-font-size:     rem-calc( 23 );
-$h5-font-size:     rem-calc( 18 );
-$h6-font-size:     1rem;
+$h1-font-size:     px-to-em( 42 );
+$h2-font-size:     px-to-em( 25 );
+$h3-font-size:     px-to-em( 23 );
+$h4-font-size:     px-to-em( 20 );
+$h5-font-size:     px-to-em( 18 );
+$h6-font-size:     1em;
 
 
 // ----------------------------------------------------------------------------
@@ -26,7 +27,7 @@ $h6-font-size:     1rem;
 $color-brand:      #b53f87;
 $color-background: #222;
 $color-link:       $color-brand;
-$color-link-hover: #C09;//lighten( $color-link, 10% );
+$color-link-hover: #9D6188;
 
 
 // ----------------------------------------------------------------------------
@@ -46,7 +47,7 @@ $dir-img:          '../../img';
 $column:           60px;
 $gutter:           20px;
 $grid-columns:     12;
-$max-width:        em( 1000 );
+$max-width:        px-to-em( 1000 );
 
 
 // ----------------------------------------------------------------------------

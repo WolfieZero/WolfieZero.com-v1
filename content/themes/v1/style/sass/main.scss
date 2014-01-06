@@ -8,9 +8,9 @@
 // Globals
 // ----------------------------------------------------------------------------
 
-@import 'globals/config';
 @import 'globals/functions';
 @import 'globals/mixins';
+@import 'globals/config';
 
 
 // ----------------------------------------------------------------------------
@@ -32,6 +32,7 @@
 @import 'module/typography';
 @import 'module/links';
 
+@import 'module/button';
 @import 'module/navigation';
 @import 'module/blurb';
 @import 'module/social';
@@ -39,6 +40,8 @@
 @import 'module/site';
 @import 'module/list';
 @import 'module/single';
+@import 'module/video';
+@import 'module/wp';
 
 
 // ----------------------------------------------------------------------------

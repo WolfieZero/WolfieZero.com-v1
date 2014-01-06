@@ -3,19 +3,7 @@
 // Single
 // ============================================================================
 
-
-// ----------------------------------------------------------------------------
-// Variables
-// ----------------------------------------------------------------------------
-
-$module: 'single';
-
-
-// ----------------------------------------------------------------------------
-// Global
-// ----------------------------------------------------------------------------
-
-.#{$module} {
+.single {
 
     & > article {
         @include clearfix;
@@ -28,7 +16,7 @@ $module: 'single';
 // Header
 // ----------------------------------------------------------------------------
 
-.#{$module}--header {
+.single-header {
     background: $color-brand;
 
     & > .pad {
@@ -47,7 +35,7 @@ $module: 'single';
 // Content
 // ----------------------------------------------------------------------------
 
-.#{$module}--content {
+.single-content {
     @include outer-container;
 
     p {
@@ -69,6 +57,32 @@ $module: 'single';
             @include shift( 1 );
             @include span-columns( 10 );
         }
+    }
+
+}
+
+
+.single-footer {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #444;
+    text-align: center;
+
+    & > .pad {
+        @include outer-container;
+    }
+
+}
+
+
+.single-comments {
+    margin-top: 3em;
+
+    @include outer-container;
+
+    & > .pad {
+        @include shift( 2 );
+        @include span-columns( 8 );
     }
 
 }

@@ -34,9 +34,6 @@ npm-debug.log
 /content/plugins/*
 
 # Don't ingore the following
-!/content/plugins/Auto-DFP/
-!/content/plugins/fubra-passport/
-!/content/plugins/simply-poll-passport/
-!/content/plugins/simply-survey-passport/
-!/content/plugins/WP-PetrolPrices/
-!/content/plugins/permalink-editor/
+!/content/plugins/html-inspector.php
+!/content/plugins/remove-headers.php
+!/content/plugins/wz-legacy/

@@ -8,15 +8,15 @@ the_post();
 get_header();
 ?>
 
-<article>
+<article class="single">
 
-    <header class="single--header">
+    <header class="single-header">
         <div class="pad">
             <h1><?php the_title(); ?></h1>
         </div>
     </header>
 
-    <div class="single--content">
+    <div class="single-content">
         <div class="pad">
             <?php the_content(); ?>
         </div>

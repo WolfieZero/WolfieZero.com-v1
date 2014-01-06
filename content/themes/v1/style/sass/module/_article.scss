@@ -67,15 +67,33 @@
 
 
 // ----------------------------------------------------------------------------
-// Aritcle
+// Aritcles Navigation
 // ----------------------------------------------------------------------------
 
-.article {
+.articles-nav {
+    clear: both;
+    padding-top: 2em;
 
+    @include shift( 2 );
+    @include span-columns( 8 );
+
+    @include media( max-width 720px ) {
+        @include shift( 1 );
+        @include span-columns( 10 );
+    }
 }
 
-    .article__meta {
-        & > abbr {
-            border-bottom-style: none;
+    .articles-nav__more {
+        & > a {
+            @extend .btn;
+            width: 100%;
+        }
+    }
+
+    .articles-nav__page {
+        width: 49%;
+        & > a {
+            @extend .btn;
+            width: 100%;
         }
     }

@@ -1,5 +1,15 @@
 
+<?php
 
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$args = array (
+    'showposts' => 10,
+    'paged' => $paged
+);
+query_posts( $args );
+
+
+?>
 <?php while ( have_posts() ) : the_post(); ?>
     <article class="articles-item">
         <h2><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>

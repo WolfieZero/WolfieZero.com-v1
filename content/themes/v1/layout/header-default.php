@@ -2,7 +2,9 @@
 <header class="site-header">
     <div class="container">
 
-        <div class="img-logo img-logo--small"><?php bloginfo( 'name' ); ?></div>
+        <div class="img-logo img-logo--small"></div>
+
+        <p class="site-header__title"><a href="/"><?php bloginfo( 'name' ); ?></a></p>
 
         <?php
 

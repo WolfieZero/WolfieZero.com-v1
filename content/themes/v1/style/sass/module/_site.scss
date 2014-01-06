@@ -15,32 +15,52 @@
 
 .site-header {
     @extend .site;
+
     background: $color-brand;
 
     & > .container {
         @include outer-container;
     }
 
+    a {
+        color: #DDD;
+    }
 
     .img-logo {
         background-size: contain;
+        float: left;
+        margin-right: $gutter;
 
         @include shift( 1 );
-        @include span-columns( 1 );
+//        @include span-columns( 1 );
 
     }
 
 }
 
+    // ------------------------------------------------------------------------
+    // Site Header - title mod
+    // ------------------------------------------------------------------------
+
     .site-header__title {
-        @include span-columns( 8 );
-        @include shift( 2 );
+        line-height: 40px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: px-to-em( 22 );
+
+        @include span-columns( 3 );
+
+        & > a {
+            color: inherit;
+        }
+
     }
 
 
     // ------------------------------------------------------------------------
-    // Site Header - Home
+    // Site Header - home elem
     // ------------------------------------------------------------------------
+
     .site-header--home {
         height: auto;
 
@@ -64,7 +84,7 @@
 
 
 // ----------------------------------------------------------------------------
-// Site: Body
+// Site Body
 // ----------------------------------------------------------------------------
 
 .site-body {
@@ -75,11 +95,13 @@
 
 
 // ----------------------------------------------------------------------------
-// Site: Footer
+// Site Footer
 // ----------------------------------------------------------------------------
 
 .site-footer {
-    @extend .site;
+    margin-top: 3em;
+    margin-bottom: 3em;
+
     clear: both;
     color: #444;
     text-align: center;

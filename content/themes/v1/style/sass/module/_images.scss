@@ -22,7 +22,7 @@
 .img-logo {
     @extend .img;
 
-    background-image: url('#{$dir-img}/logo.png');
+    background-image: url('#{$dir-img}/logo.svg');
 
     @include size( 160px );
     @include hidpi( 1.5 ) {
