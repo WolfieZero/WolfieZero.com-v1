@@ -13,6 +13,7 @@
 node_modules/
 /vendor/
 /wp/
+.htaccess
 .sass-cache/
 .DS_Store
 composer.lock
