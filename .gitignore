@@ -37,3 +37,4 @@ npm-debug.log
 !/content/plugins/html-inspector.php
 !/content/plugins/remove-headers.php
 !/content/plugins/wz-legacy/
+!/content/plugins/remove-root-url/
