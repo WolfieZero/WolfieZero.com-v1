@@ -1392,14 +1392,14 @@ a:hover {
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000363}}
 .single-footer {
   margin-top: 1em;
   margin-bottom: 1em;
   color: #444;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000369}}
 .single-footer > .pad {
   *zoom: 1;
   max-width: 55.5555556em;
@@ -1416,7 +1416,7 @@ a:hover {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000376}}
 .single-comments {
   margin-top: 3em;
   *zoom: 1;
@@ -1433,7 +1433,7 @@ a:hover {
 .single-comments:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000381}}
 .single-comments > .pad {
   margin-left: 17.0212766%;
   display: block;
@@ -1444,6 +1444,20 @@ a:hover {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
 .single-comments > .pad:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 850px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000381}}
+  .single-comments > .pad {
+    margin-left: 8.5106383%;
+    display: block;
+    float: left;
+    margin-right: 2.1276596%;
+    width: 82.9787234%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+  .single-comments > .pad:last-child {
+    margin-right: 0;
+  }
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_video\.scss}line{font-family:\000038}}
