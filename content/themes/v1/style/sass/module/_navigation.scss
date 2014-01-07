@@ -40,3 +40,31 @@
     }
 
 }
+
+
+// ----------------------------------------------------------------------------
+// Home
+// ----------------------------------------------------------------------------
+
+.nav-home {
+    background: #202020;
+    padding: 0.5em 0;
+
+    @include clearfix;
+
+}
+
+    .nav-home__inner {
+        text-align: center;
+        @include outer-container;
+        a {
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+        }
+
+        li {
+            @include media( max-width 425px ) {
+                display: block;
+            }
+        }
+    }

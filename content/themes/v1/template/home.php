@@ -36,6 +36,20 @@ get_header(); ?>
     </div>
 </header>
 
+<div class="nav-home">
+    <?php
+
+        if( has_nav_menu( 'header' ) ) {
+            wp_nav_menu( array(
+                'theme_location'  => 'header',
+                'container'       => 'nav',
+                'container_class' => 'nav-home__inner',
+            ) );
+        }
+
+    ?>
+</div>
+
 <section class="articles">
 
     <?php

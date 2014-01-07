@@ -42,13 +42,10 @@ function enqueue_files() {
     wp_enqueue_style( 'fontawesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' );
 
     // Main Style
-    wp_enqueue_style( 'main', get_template_directory_uri() . '/style/css/main.css' );
+    wp_enqueue_style( 'main', get_latest_css_file() );
 
-    //wp_enqueue_style( 'foundation', get_template_directory_uri() . '/bower_components/foundation/js/foundation.min.js' );
-
+    // JavaScript
     //wp_enqueue_style( 'jquery', get_template_directory_uri() . '/bower_components/jquery/jquery.min.js' );
-
-    //wp_enqueue_style( 'app', get_template_directory_uri() . '/js/app.js' );
 
 }
 
@@ -80,5 +77,32 @@ function remove_enqueued_ver( $src ) {
         $src = remove_query_arg( 'ver', $src );
 
     return $src;
+
+}
+
+
+/**
+ * Gets the latest CSS file or the main if dev
+ *
+ * @return  string
+ */
+function get_latest_css_file () {
+
+    if( !WP_DEBUG ) {
+
+        $path         = get_template_directory() . '/style/css-build/';
+        $file         = '*.css';
+        $pathtosearch = $path . $file;
+        $dir          = glob( $pathtosearch );
+
+        if( count( $dir ) > 0 ) {
+            $css_file = end( explode( '/', end( $dir ) ) );
+            return get_template_directory_uri() . '/style/css-build/' . $css_file;
+        }
+
+    }
+
+    // if we are in dev or cannot find build file then use the dev file
+    return get_template_directory_uri() . '/style/css-dev/main.css';
 
 }

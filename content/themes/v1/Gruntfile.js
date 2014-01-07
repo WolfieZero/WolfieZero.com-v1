@@ -4,8 +4,7 @@ module.exports = function (grunt) {
 
     "use strict";
 
-    var jsFiles = grunt.file.readJSON('script/main.json'),
-        lrPort  = 1337;
+    var jsFiles = grunt.file.readJSON('script/main.json');
 
     // ========================================================================
     // Configure Task
@@ -15,40 +14,53 @@ module.exports = function (grunt) {
 
         pkg: grunt.file.readJSON('package.json'),
 
+
         // --------------------------------------------------------------------
         // Sass [grunt-contrib-sass]
         // --------------------------------------------------------------------
 
         sass: {
-            //banner: '<%= grunt.template.today("yyyy-mm-dd") %>',
             dev: {
-                sourcemap: true,
-                style: 'expanded',
-                precision: 2,
-                debugInfo: true,
-                files: [{
-                    expand: true,
-                    cwd: 'style/sass/',
-                    src: '*.{sass,scss}',
-                    dest: 'style/css',
-                    ext: '.css'
-                }]
+                options: {
+                    style: 'expanded',
+                    precision: 7,
+                    debugInfo: true
+                },
+                files: {
+                    'style/css-dev/main.css': 'style/sass/main.scss'
+                }
             },
             build: {
-                sourcemap: true,
-                style: 'compressed',
-                precision: 2,
-                debugInfo: false,
-                files: [{
-                    expand: true,
-                    cwd: 'style/sass/',
-                    src: '*.{sass,scss}',
-                    dest: 'style/css',
-                    ext: '.css'
-                }]
+                options: {
+                    style: 'compressed',
+                    precision: 7,
+                    noCache: true,
+                    banner:
+                        '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+                        '<%= grunt.template.today("yyyy-mm-dd") %> */'
+                },
+                files: {
+                    'style/css-build/<%= grunt.template.today("yyyymmdd") %>.css': 'style/sass/main.scss'
+                }
+            },
+            wp: {
+                options: {
+                    noCache: true,
+                    banner:
+                        '/*\n' +
+                        'Theme Name: <%= pkg.name %>\n' +
+                        'Version: <%= pkg.version %>\n' +
+                        'Author: <%= pkg.author %>\n' +
+                        'Author URI: http://wolfiezero.com\n' +
+                        'License: GPLv2 or later\n' +
+                        'License URI: http://www.gnu.org/licenses/gpl-2.0.html\n' +
+                        '*/'
+                },
+                files: {
+                    'style.css': 'style.css'
+                }
             }
         },
-
 
 
         // --------------------------------------------------------------------
@@ -99,21 +111,9 @@ module.exports = function (grunt) {
 
 
         // --------------------------------------------------------------------
-        // Run server [grunt-contrib-watch]
-        // --------------------------------------------------------------------
-        connect: {
-            server: {
-                options: {
-                    port: lrPort,
-                    keepalive: true
-                }
-            }
-        },
-
-
-        // --------------------------------------------------------------------
         // Watch files [grunt-contrib-connect]
         // --------------------------------------------------------------------
+
         watch: {
             sass: {
                 files: ['style/sass/**/*.{scss,sass}'],
@@ -122,28 +122,6 @@ module.exports = function (grunt) {
             uglify: {
                 files: ['script/dev/**/*.js', 'script/**/*.json'],
                 tasks: 'uglify:dev'
-            },
-            livereload: {
-                options: {
-                    livereload: true,
-                    port: lrPort
-                },
-                files: [
-                    'style/css/*.css'
-                ]
-            }
-        },
-
-
-        // --------------------------------------------------------------------
-        // Concurrent tasks [grunt-concurrent]
-        // --------------------------------------------------------------------
-        concurrent: {
-            target: {
-                tasks: ['watch', 'connect'],
-                options: {
-                    logConcurrentOutput: true
-                }
             }
         }
 
@@ -159,8 +137,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-concurrent');
 
 
     // ========================================================================
@@ -169,9 +145,9 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'sass:build',
+        'sass:wp',
         'imagemin'
     ]);
-    grunt.registerTask('server', 'concurrent:target');
 
 
 };
