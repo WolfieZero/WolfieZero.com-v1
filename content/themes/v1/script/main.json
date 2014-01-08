@@ -1,8 +1,8 @@
 {
 
-    "script/dist/main.js": [
+    "script/build/main.js": [
 
-        "script/dev/vendor/zepto.js",
+        "bower_components/FitText.js/jquery.fittext.js",
         "script/dev/main.js"
 
     ]

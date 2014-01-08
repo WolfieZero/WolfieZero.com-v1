@@ -10,6 +10,7 @@
 /content/uploads/
 /content/cache/
 /content/vendor/
+bower_components/
 node_modules/
 /vendor/
 /wp/

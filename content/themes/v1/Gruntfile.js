@@ -68,26 +68,26 @@ module.exports = function (grunt) {
         // --------------------------------------------------------------------
 
         uglify: {
-            options: {
-                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-                        '<%= grunt.template.today("yyyy-mm-dd") %> */'
-            },
             dev: {
                 options: {
                     beautify: true,
                     preserveComments: 'all',
-                    mangle: false
+                    mangle: false,
+                    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+                            '<%= grunt.template.today("yyyy-mm-dd") %> */'
                 },
                 files: jsFiles
             },
-            dist: {
+            build: {
                 options: {
                     beautify: false,
                     preserveComments: 'some',
                     mangle: true,
                     compress: true,
                     assetCacheBuster: true,
-                    report: 'gzip'
+                    report: 'gzip',
+                    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+                            '<%= grunt.template.today("yyyy-mm-dd") %> */'
                 },
                 files: jsFiles
             }
@@ -146,6 +146,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'sass:build',
         'sass:wp',
+        'uglify:build',
         'imagemin'
     ]);
 

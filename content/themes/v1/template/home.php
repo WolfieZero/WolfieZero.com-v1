@@ -13,7 +13,7 @@ get_header(); ?>
         <div class="img-logo"><?php bloginfo( 'name' ); ?></div>
 
         <div class="blurb">
-            <h1>WolfieZero.com</h1>
+            <h1 class="site__title  site__title--home">WolfieZero.com</h1>
             <p><?php the_content(); ?></p>
             <p class="social">
                 <a href="http://twitter.com/WolfieZero" rel="external" class="social__ico--twitter-bg">

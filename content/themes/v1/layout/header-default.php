@@ -4,7 +4,7 @@
 
         <div class="img-logo img-logo--small"></div>
 
-        <p class="site-header__title"><a href="/"><?php bloginfo( 'name' ); ?></a></p>
+        <p class="site__title  site__title--small"><a href="/"><?php bloginfo( 'name' ); ?></a></p>
 
         <?php
 

@@ -56,7 +56,9 @@
 
     .nav-home__inner {
         text-align: center;
+
         @include outer-container;
+
         a {
             margin-left: 0.5em;
             margin-right: 0.5em;
@@ -64,7 +66,9 @@
 
         li {
             @include media( max-width 425px ) {
+                font-size: 1.5em;
                 display: block;
             }
+
         }
     }
