@@ -35,7 +35,9 @@ add_filter( 'script_loader_src', 'remove_enqueued_ver', 10, 2 );
 function enqueue_files() {
 
     // Mondernizr
-    //wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js' );
+    //wp_enqueue_script( 'modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js' );
+    // Or if no Modernizr then Shiv it
+    wp_enqueue_script( 'html5-shiv', '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js' );
 
     // Fonts
     wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' );
