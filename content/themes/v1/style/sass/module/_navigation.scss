@@ -39,6 +39,21 @@
         color: inherit;
     }
 
+
+    @include media( max-width 600px ) {
+        text-align: center;
+        float: none;
+
+        @include shift( 1 );
+        @include span-columns( 10 );
+
+        li {
+            padding: 0;
+            font-size: 1.2em;
+            display: block;
+        }
+    }
+
 }
 
 
