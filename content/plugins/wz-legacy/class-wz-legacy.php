@@ -65,7 +65,7 @@ class WZ_Legacy {
 
         if( $yt_id ) {
             echo '<div class="video  video--widescreen">';
-                echo '<iframe id="ytplayer" type="text/html" width="742" height="417.375" src="https://www.youtube.com/embed/' . $yt_id . '?modestbranding=1&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>';
+                echo '<iframe id="ytplayer" style="border:0;" width="742" height="417" src="https://www.youtube.com/embed/' . $yt_id . '?modestbranding=1&amp;showinfo=0&amp;autohide=1" allowfullscreen></iframe>';
             echo '</div>';
         }
 
