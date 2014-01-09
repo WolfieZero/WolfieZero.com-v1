@@ -14,7 +14,7 @@ get_header(); ?>
 
         <div class="blurb">
             <h1 class="site__title  site__title--home">WolfieZero.com</h1>
-            <p><?php the_content(); ?></p>
+            <?php the_content(); ?>
             <p class="social">
                 <a href="http://twitter.com/WolfieZero" rel="external" class="social__ico--twitter-bg">
                     <i class="fa fa-twitter social__ico--twitter">Twitter</i></a>
