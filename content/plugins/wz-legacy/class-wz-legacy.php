@@ -27,6 +27,8 @@ class WZ_Legacy {
 
         add_filter( 'the_content', array( $this, 'check_for_youtube' ) );
 
+        add_action( 'wp', array( $this, 'redirect_old_blog_uri' ) );
+
     }
 
 
@@ -68,6 +70,31 @@ class WZ_Legacy {
         }
 
         echo $content;
+
+    }
+
+
+    /**
+     * Takes the old URI format /(integer)/(string)/ and transforms it into the
+     * new blog format
+     *
+     * @return  null
+     */
+    public static function redirect_old_blog_uri() {
+
+        global $wp_query;
+
+        if( $wp_query->is_404 ) {
+
+            $uri = explode( '/', $_SERVER['REQUEST_URI'] );
+
+            if( isset( $uri[1] ) && (int)$uri[1] > 0 ) {
+                $wp_query->is_404 = false;
+                wp_redirect( '/blog/' . $uri[2], 301 );
+                exit;
+            }
+
+        }
 
     }
 
