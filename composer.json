@@ -18,6 +18,7 @@
         "wpackagist/wordpress-importer": "*",
         "wpackagist/google-analytics-for-wordpress": "*",
         "wpackagist/addthis-smart-layers": "*",
+        "wpackagist/addthis": "*",
         "wpackagist/disqus-comment-system": "*",
         "wpackagist/gust": "*",
         "wpackagist/wp-markdown": "*",
