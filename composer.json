@@ -20,7 +20,8 @@
         "wpackagist/addthis-smart-layers": "*",
         "wpackagist/disqus-comment-system": "*",
         "wpackagist/gust": "*",
-        "wpackagist/wp-markdown": "*"
+        "wpackagist/wp-markdown": "*",
+        "wpackagist/jetpack": "*"
     },
     "require-dev"  : {
         "wpackagist/developer": "*",
