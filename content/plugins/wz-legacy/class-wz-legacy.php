@@ -61,15 +61,18 @@ class WZ_Legacy {
 
         global $post;
 
+        $html  = '';
         $yt_id = get_post_meta( $post->ID, 'ytID', true );
 
-        if( $yt_id ) {
-            echo '<div class="video  video--widescreen">';
-                echo '<iframe id="ytplayer" style="border:0;" width="742" height="417" src="https://www.youtube.com/embed/' . $yt_id . '?modestbranding=1&amp;showinfo=0&amp;autohide=1" allowfullscreen></iframe>';
-            echo '</div>';
+        if( $post->post_type === 'post' && $yt_id ) {
+            $html .= '<div class="video  video--widescreen">';
+                $html .= '<iframe id="ytplayer" style="border:0;" width="742" height="417" src="https://www.youtube.com/embed/' . $yt_id . '?modestbranding=1&amp;showinfo=0&amp;autohide=1" allowfullscreen></iframe>';
+            $html .= '</div>';
         }
 
-        echo $content;
+        $html .= $content;
+
+        return $html;
 
     }
 
