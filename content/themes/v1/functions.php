@@ -40,7 +40,6 @@ function enqueue_files() {
     wp_enqueue_script( 'html5-shiv', '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js' );
 
     // Fonts
-    wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' );
     wp_enqueue_style( 'fontawesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' );
 
     // Main Style

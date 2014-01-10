@@ -9,7 +9,7 @@
 // ----------------------------------------------------------------------------
 
 @import 'globals/functions';
-@import 'globals/mixins';
+@import 'globals/mixins/google-font';
 @import 'globals/config';
 
 
@@ -17,10 +17,17 @@
 // Vendor
 // ----------------------------------------------------------------------------
 
-@import 'vendor/normalize/normalize';
-@import 'vendor/bourbon/bourbon';        // http://bourbon.io/docs/
-@import 'vendor/neat/neat';             // http://neat.bourbon.io/docs/
+@import 'normalize-scss/normalize';
+@import 'bourbon/app/assets/stylesheets/bourbon'; // http://bourbon.io/docs/
+@import 'neat/app/assets/stylesheets/neat';      // http://neat.bourbon.io/docs/
+
+
+// ----------------------------------------------------------------------------
+// Fonts
+// ----------------------------------------------------------------------------
+
 @import '../fonts/sansation/sansation';
+@include google-font( Ubuntu, ( 300, 400, 700 ) );
 
 
 // ----------------------------------------------------------------------------
@@ -42,11 +49,3 @@
 @import 'module/single';
 @import 'module/video';
 @import 'module/wp';
-
-
-// ----------------------------------------------------------------------------
-// Scaffold
-// ----------------------------------------------------------------------------
-// a temporary module that is either supported by an existing module or
-
-@import 'scaffold/temp';

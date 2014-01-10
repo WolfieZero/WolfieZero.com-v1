@@ -1,18 +1,23 @@
 /*global module:false*/
 
+// ============================================================================
+// Grunt Tasks
+// ============================================================================
+
 module.exports = function (grunt) {
 
     "use strict";
 
-    var jsFiles = grunt.file.readJSON('script/main.json');
+    var jsFiles = grunt.file.readJSON( 'script/main.json' );
 
-    // ========================================================================
+
+    // ------------------------------------------------------------------------
     // Configure Task
-    // ========================================================================
+    // ------------------------------------------------------------------------
 
     grunt.initConfig({
 
-        pkg: grunt.file.readJSON('package.json'),
+        pkg: grunt.file.readJSON( 'package.json' ),
 
 
         // --------------------------------------------------------------------
@@ -24,7 +29,8 @@ module.exports = function (grunt) {
                 options: {
                     style: 'expanded',
                     precision: 7,
-                    debugInfo: true
+                    debugInfo: true,
+                    loadPath: ['./bower_components']
                 },
                 files: {
                     'style/css-dev/main.css': 'style/sass/main.scss'
@@ -129,26 +135,26 @@ module.exports = function (grunt) {
     });
 
 
-    // ========================================================================
+    // ------------------------------------------------------------------------
     // Load NPM Task
-    // ========================================================================
+    // ------------------------------------------------------------------------
 
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks( 'grunt-contrib-imagemin' );
+    grunt.loadNpmTasks( 'grunt-contrib-sass' );
+    grunt.loadNpmTasks( 'grunt-contrib-watch' );
+    grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 
 
-    // ========================================================================
+    // ------------------------------------------------------------------------
     // Register Tasks
-    // ========================================================================
+    // ------------------------------------------------------------------------
 
-    grunt.registerTask('build', [
+    grunt.registerTask( 'build', [
         'sass:build',
         'sass:wp',
         'uglify:build',
         'imagemin'
-    ]);
+    ] );
 
 
 };

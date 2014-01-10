@@ -1,11 +1,19 @@
-/*!! _normalize.css v2.1.2 | MIT License | http://github.com/hail2u/normalize.scss */
-/* =============================================================================
-   HTML5 display definitions
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,700);
+/* ==========================================================================
+   Normalize.scss settings
    ========================================================================== */
 /**
- * Correct `block` display not defined in IE 8/9.
+ * Includes legacy browser support IE6/7
+ *
+ * Set to false if you want to drop support for IE6 and IE7
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/html5\/_blocks\.scss}line{font-family:\0000316}}
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\0000331}}
 article,
 aside,
 details,
@@ -22,46 +30,44 @@ summary {
 }
 
 /**
- * Correct `inline-block` display not defined in IE 8/9.
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/html5\/_inline-blocks\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\0000341}}
 audio,
 canvas,
 video {
   display: inline-block;
 }
 
-/*
+/**
  * Prevents modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS5 devices.
+ * Remove excess height in iOS 5 devices.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/html5\/_audio\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\0000354}}
 audio:not([controls]) {
   display: none;
-  /* 1 */
   height: 0;
-  /* 2 */
 }
 
-/*
+/**
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/html5\/_hidden\.scss}line{font-family:\000037}}
-[hidden],
-template {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\0000364}}
+[hidden], template {
   display: none;
 }
 
-/* =============================================================================
+/* ==========================================================================
    Base
    ========================================================================== */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
+ * 3.Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/base\/_html\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\0000379}}
 html {
   font-family: sans-serif;
   /* 1 */
@@ -74,18 +80,18 @@ html {
 /**
  * Remove default margin.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/base\/_body\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\0000392}}
 body {
   margin: 0;
 }
 
-/* =============================================================================
+/* ==========================================================================
    Links
    ========================================================================== */
 /**
  * Remove the gray background color from active links in IE 10.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/links\/_fix-background\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003104}}
 a {
   background: transparent;
 }
@@ -93,28 +99,27 @@ a {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/links\/_fix-outline\.scss}line{font-family:\000035}}
+/**
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003118}}
 a:focus {
   outline: thin dotted;
 }
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/links\/_fix-outline\.scss}line{font-family:\0000314}}
-a:active,
-a:hover {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003121}}
+a:active, a:hover {
   outline: 0;
 }
 
-/* =============================================================================
+/* ==========================================================================
    Typography
    ========================================================================== */
 /**
+ * Addresses font sizes and margins set differently in IE 6/7.
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_headings\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003137}}
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -123,7 +128,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_abbr\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003176}}
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -131,25 +136,24 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_fix-bolder\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003185}}
 b,
 strong {
   font-weight: bold;
 }
 
 /**
- * Address styling not present in IE 8/9.
+ * Address styling not present in Safari 5 and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_dfn\.scss}line{font-family:\000035}}
-mark {
-  background: #ff0;
-  color: #000;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003199}}
+dfn {
+  font-style: italic;
 }
 
 /**
  * Address differences between Firefox and other browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_hr\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003207}}
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -157,18 +161,21 @@ hr {
 }
 
 /**
- * Address styling not present in IE 8/9.
+ * Addresses styling not present in IE 8/9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_mark\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003217}}
 mark {
   background: #ff0;
   color: #000;
 }
 
 /**
+ * Addresses margins set differently in IE 6/7.
+ */
+/**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_fix-monospace\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003240}}
 code,
 kbd,
 pre,
@@ -180,15 +187,15 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_pre\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003252}}
 pre {
   white-space: pre-wrap;
 }
 
 /**
- * Set consistent quote types.
+ *  Set consistent quote types.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_q\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003260}}
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -196,7 +203,7 @@ q {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_small\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003288}}
 small {
   font-size: 80%;
 }
@@ -204,7 +211,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_sub-and-sup\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003297}}
 sub,
 sup {
   font-size: 75%;
@@ -213,23 +220,24 @@ sup {
   vertical-align: baseline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_sub-and-sup\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003304}}
 sup {
   top: -0.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/typography\/_sub-and-sup\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003308}}
 sub {
   bottom: -0.25em;
 }
 
-/* =============================================================================
+/* ==========================================================================
    Embedded content
    ========================================================================== */
 /**
- * Remove border when inside `a` element in IE 8/9.
+ * 1. Remove border when inside `a` element in IE 8/9.
+ * 2. Improves image quality when scaled in IE 7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/embed\/_img\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003364}}
 img {
   border: 0;
 }
@@ -237,29 +245,29 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/embed\/_svg\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003375}}
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* =============================================================================
+/* ==========================================================================
    Figures
    ========================================================================== */
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/figures\/_figure\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003387}}
 figure {
   margin: 0;
 }
 
-/* =============================================================================
+/* ==========================================================================
    Forms
    ========================================================================== */
 /**
  * Define consistent border, margin, and padding.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/forms\/_fieldset\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003399}}
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -269,8 +277,10 @@ fieldset {
 /**
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Corrects text not wrapping in Firefox 3.
+ * 4. Corrects alignment displayed oddly in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/forms\/_legend\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003412}}
 legend {
   border: 0;
   /* 1 */
@@ -282,8 +292,9 @@ legend {
  * 1. Correct font family not being inherited in all browsers.
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 4. Improves appearance and consistency in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/forms\/_fix-font\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003431}}
 button,
 input,
 select,
@@ -297,25 +308,25 @@ textarea {
 }
 
 /**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003447}}
+button,
+input {
+  line-height: normal;
+}
+
+/**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/forms\/_fix-text-transform\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003459}}
 button,
 select {
   text-transform: none;
-}
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/forms\/_fix-line-height\.scss}line{font-family:\000037}}
-button,
-input {
-  line-height: normal;
 }
 
 /**
@@ -324,8 +335,10 @@ input {
  * 2. Correct inability to style clickable `input` types in iOS.
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/forms\/_buttons\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003476}}
 button,
 html input[type="button"],
 input[type="reset"],
@@ -339,7 +352,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/forms\/_disabled\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003489}}
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -347,9 +360,10 @@ html input[disabled] {
 
 /**
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
+ * 2. Remove excess padding in IE 7/8/9/10.
+ *    Known issue: excess padding remains in IE 6.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/forms\/_checkbox-and-radio\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003500}}
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -363,7 +377,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/forms\/_search\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003515}}
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -377,7 +391,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/forms\/_search\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003528}}
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -386,7 +400,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/forms\/_fix-focus-inner\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003537}}
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -397,7 +411,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/forms\/_textarea\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003547}}
 textarea {
   overflow: auto;
   /* 1 */
@@ -405,19 +419,19 @@ textarea {
   /* 2 */
 }
 
-/* =============================================================================
+/* ==========================================================================
    Tables
    ========================================================================== */
 /**
  * Remove most spacing between table cells.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/normalize\/tables\/_fix-cell-spacing\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/normalize-scss\/_normalize\.scss}line{font-family:\00003560}}
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_grid\.scss}line{font-family:\000032}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_grid\.scss}line{font-family:\000032}}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -486,7 +500,7 @@ table {
 
 }
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_images\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_images\.scss}line{font-family:\000037}}
 .img, .img-logo {
   background-size: cover;
   background-repeat: no-repeat;
@@ -495,20 +509,20 @@ table {
   text-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_images\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_images\.scss}line{font-family:\0000318}}
 .img-logo {
   background-image: url("../../img/logo.svg");
   width: 160px;
   height: 160px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_images\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_images\.scss}line{font-family:\0000318}}
   .img-logo {
     background-image: url("../../img/logo@2x.png");
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_images\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_images\.scss}line{font-family:\0000335}}
 .img-logo--small {
   width: 40px;
   height: 40px;
@@ -641,12 +655,12 @@ a:hover {
 .nav-main {
   text-align: right;
   float: right;
-  display: block;
   float: left;
+  display: block;
   margin-right: 2.1276596%;
   width: 48.9361702%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
 .nav-main:last-child {
   margin-right: 0;
 }
@@ -669,12 +683,12 @@ a:hover {
     text-align: center;
     float: none;
     margin-left: 8.5106383%;
-    display: block;
     float: left;
+    display: block;
     margin-right: 2.1276596%;
     width: 82.9787234%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
   .nav-main:last-child {
     margin-right: 0;
   }
@@ -692,12 +706,12 @@ a:hover {
   padding: 0.5em 0;
   *zoom: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000318}}
 .nav-home:before, .nav-home:after {
   content: " ";
   display: table;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000323}}
 .nav-home:after {
   clear: both;
 }
@@ -710,12 +724,12 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000318}}
 .nav-home__inner:before, .nav-home__inner:after {
   content: " ";
   display: table;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000323}}
 .nav-home__inner:after {
   clear: both;
 }
@@ -732,49 +746,49 @@ a:hover {
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_blurb\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_blurb\.scss}line{font-family:\000037}}
 .blurb {
   font-family: SansationLight;
   font-size: 1.2em;
   font-weight: 100;
   text-align: justify;
-  display: block;
   float: left;
+  display: block;
   margin-right: 2.1276596%;
   width: 65.9574468%;
   margin-left: 0%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
 .blurb:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 850px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_blurb\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_blurb\.scss}line{font-family:\000037}}
   .blurb {
-    display: block;
     float: left;
+    display: block;
     margin-right: 2.1276596%;
     width: 82.9787234%;
     margin-left: 8.5106383%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
   .blurb:last-child {
     margin-right: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_blurb\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_blurb\.scss}line{font-family:\0000321}}
   .blurb h1 {
     text-align: center;
   }
 }
 
 @media screen and (max-width: 850px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\000037}}
   .social {
     text-align: center;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000362}}
 .social__ico, .social__ico--twitter-bg, .social__ico--twitter, .social__ico--github-bg, .social__ico--github, .social__ico--flickr-bg, .social__ico--flickr, .social__ico--linkedin-bg, .social__ico--linkedin, .social__ico--youtube-bg, .social__ico--youtube, .social__ico--instagram-bg, .social__ico--instagram, .social__ico--codeschool-bg, .social__ico--codeschool, .social__ico--stack-exchange-bg, .social__ico--stack-exchange {
   display: inline-block;
   -webkit-transition: all 0.3s ease;
@@ -784,18 +798,18 @@ a:hover {
   height: 48px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000322}}
 .social__ico--twitter-bg {
   overflow: hidden;
   background-color: #222;
   border: 3px solid #222;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000329}}
 .social__ico--twitter-bg:hover {
   background-color: #00aced;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000335}}
 .social__ico--twitter {
   font-size: 0;
   color: #b53f87;
@@ -805,29 +819,29 @@ a:hover {
   -o-transform: rotate(-25deg);
   transform: rotate(-25deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000343}}
 .social__ico--twitter:hover {
   color: #eee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000347}}
 .social__ico--twitter:before {
   margin-left: 2px;
   line-height: 55px;
   font-size: 50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000322}}
 .social__ico--github-bg {
   overflow: hidden;
   background-color: #222;
   border: 3px solid #222;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000329}}
 .social__ico--github-bg:hover {
   background-color: #4183c4;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000335}}
 .social__ico--github {
   font-size: 0;
   color: #b53f87;
@@ -837,29 +851,29 @@ a:hover {
   -o-transform: rotate(-25deg);
   transform: rotate(-25deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000343}}
 .social__ico--github:hover {
   color: #eee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000347}}
 .social__ico--github:before {
   margin-left: 2px;
   line-height: 55px;
   font-size: 50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000322}}
 .social__ico--flickr-bg {
   overflow: hidden;
   background-color: #222;
   border: 3px solid #222;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000329}}
 .social__ico--flickr-bg:hover {
   background-color: #4183c4;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000335}}
 .social__ico--flickr {
   font-size: 0;
   color: #b53f87;
@@ -869,29 +883,29 @@ a:hover {
   -o-transform: rotate(-25deg);
   transform: rotate(-25deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000343}}
 .social__ico--flickr:hover {
   color: #eee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000347}}
 .social__ico--flickr:before {
   margin-left: 2px;
   line-height: 55px;
   font-size: 50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000322}}
 .social__ico--linkedin-bg {
   overflow: hidden;
   background-color: #222;
   border: 3px solid #222;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000329}}
 .social__ico--linkedin-bg:hover {
   background-color: #007fb1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000335}}
 .social__ico--linkedin {
   font-size: 0;
   color: #b53f87;
@@ -901,29 +915,29 @@ a:hover {
   -o-transform: rotate(-25deg);
   transform: rotate(-25deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000343}}
 .social__ico--linkedin:hover {
   color: #eee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000347}}
 .social__ico--linkedin:before {
   margin-left: 2px;
   line-height: 55px;
   font-size: 50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000322}}
 .social__ico--youtube-bg {
   overflow: hidden;
   background-color: #222;
   border: 3px solid #222;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000329}}
 .social__ico--youtube-bg:hover {
   background-color: #cd332d;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000335}}
 .social__ico--youtube {
   font-size: 0;
   color: #b53f87;
@@ -933,29 +947,29 @@ a:hover {
   -o-transform: rotate(-25deg);
   transform: rotate(-25deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000343}}
 .social__ico--youtube:hover {
   color: #eee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000347}}
 .social__ico--youtube:before {
   margin-left: 2px;
   line-height: 55px;
   font-size: 50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000322}}
 .social__ico--instagram-bg {
   overflow: hidden;
   background-color: #222;
   border: 3px solid #222;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000329}}
 .social__ico--instagram-bg:hover {
   background-color: #3f729b;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000335}}
 .social__ico--instagram {
   font-size: 0;
   color: #b53f87;
@@ -965,29 +979,29 @@ a:hover {
   -o-transform: rotate(-25deg);
   transform: rotate(-25deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000343}}
 .social__ico--instagram:hover {
   color: #eee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000347}}
 .social__ico--instagram:before {
   margin-left: 2px;
   line-height: 55px;
   font-size: 50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000322}}
 .social__ico--codeschool-bg {
   overflow: hidden;
   background-color: #222;
   border: 3px solid #222;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000329}}
 .social__ico--codeschool-bg:hover {
   background-color: #c68044;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000335}}
 .social__ico--codeschool {
   font-size: 0;
   color: #b53f87;
@@ -997,29 +1011,29 @@ a:hover {
   -o-transform: rotate(-25deg);
   transform: rotate(-25deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000343}}
 .social__ico--codeschool:hover {
   color: #eee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000347}}
 .social__ico--codeschool:before {
   margin-left: 2px;
   line-height: 55px;
   font-size: 50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000322}}
 .social__ico--stack-exchange-bg {
   overflow: hidden;
   background-color: #222;
   border: 3px solid #222;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000329}}
 .social__ico--stack-exchange-bg:hover {
   background-color: #1f5196;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000335}}
 .social__ico--stack-exchange {
   font-size: 0;
   color: #b53f87;
@@ -1029,11 +1043,11 @@ a:hover {
   -o-transform: rotate(-25deg);
   transform: rotate(-25deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000343}}
 .social__ico--stack-exchange:hover {
   color: #eee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_social\.scss}line{font-family:\0000347}}
 .social__ico--stack-exchange:before {
   margin-left: 2px;
   line-height: 55px;
@@ -1047,209 +1061,210 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000318}}
 .articles:before, .articles:after {
   content: " ";
   display: table;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000323}}
 .articles:after {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000321}}
 .articles-item {
   position: relative;
   margin-top: 1.618em;
   margin-left: 8.5106383%;
-  display: block;
   float: left;
+  display: block;
   margin-right: 2.1276596%;
   width: 82.9787234%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
 .articles-item:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 720px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000321}}
   .articles-item {
     margin-left: 8.5106383%;
-    display: block;
     float: left;
+    display: block;
     margin-right: 2.1276596%;
     width: 82.9787234%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
   .articles-item:last-child {
     margin-right: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000332}}
 .articles-item > h2 {
   font-weight: 100;
   margin-bottom: 0;
   -webkit-backface-visibility: hidden;
-  display: block;
   float: left;
+  display: block;
   margin-right: 2.5641026%;
   width: 79.4871795%;
   margin-left: 20.5128205%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
 .articles-item > h2:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 720px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000332}}
   .articles-item > h2 {
-    display: block;
     float: left;
+    display: block;
     margin-right: 2.5641026%;
     width: 100%;
     margin-left: 0%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
   .articles-item > h2:last-child {
     margin-right: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000349}}
 .articles-item > .article__meta {
   margin-top: 0;
   color: #4e4e4e;
   position: absolute;
   top: 0;
   text-align: right;
-  display: block;
   float: left;
+  display: block;
   margin-right: 2.5641026%;
   width: 17.9487179%;
   margin-left: 0%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
 .articles-item > .article__meta:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 720px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000349}}
   .articles-item > .article__meta {
     position: relative;
     text-align: left;
-    display: block;
     float: left;
+    display: block;
     margin-right: 2.5641026%;
     width: 100%;
     margin-left: 0%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
   .articles-item > .article__meta:last-child {
     margin-right: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000370}}
 .articles-item > .article__meta > abbr {
   border-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000383}}
 .articles-nav {
   clear: both;
   padding-top: 2em;
   margin-left: 17.0212766%;
-  display: block;
   float: left;
+  display: block;
   margin-right: 2.1276596%;
   width: 65.9574468%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
 .articles-nav:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 720px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000383}}
   .articles-nav {
     margin-left: 8.5106383%;
-    display: block;
     float: left;
+    display: block;
     margin-right: 2.1276596%;
     width: 82.9787234%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
   .articles-nav:last-child {
     margin-right: 0;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000397}}
 .articles-nav__more > a {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\00003103}}
 .articles-nav__page {
   width: 49%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_article\.scss}line{font-family:\00003105}}
 .articles-nav__page > a {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\000037}}
 .site, .site-header, .site-body {
   padding-top: 1em;
   padding-bottom: 1em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000317}}
 .site__title {
   margin-top: 0;
   margin-bottom: 0;
+  font-family: SansationLight;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000322}}
 .site__title > a {
   color: inherit;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000327}}
 .site__title--small {
   line-height: 40px;
   font-size: 1.2222222em;
-  display: block;
   float: left;
+  display: block;
   margin-right: 2.1276596%;
   width: 23.4042553%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
 .site__title--small:last-child {
   margin-right: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000338}}
 .site-header {
   background: #b53f87;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000343}}
 .site-header > .container {
   *zoom: 1;
   max-width: 55.5555556em;
   margin-left: auto;
   margin-right: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000318}}
 .site-header > .container:before, .site-header > .container:after {
   content: " ";
   display: table;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000323}}
 .site-header > .container:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000347}}
 .site-header a {
   color: #DDD;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000351}}
 .site-header .img-logo {
   background-size: contain;
   float: left;
@@ -1257,26 +1272,26 @@ a:hover {
   margin-left: 8.5106383%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000368}}
 .site-header--home {
   height: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000371}}
 .site-header--home .img-logo {
-  display: block;
   float: left;
+  display: block;
   margin-right: 2.1276596%;
   width: 14.893617%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
 .site-header--home .img-logo:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 850px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000371}}
   .site-header--home .img-logo {
-    display: block;
     float: left;
+    display: block;
     margin-right: 2.1276596%;
     width: 31.9148936%;
     height: 5.5555556em;
@@ -1288,19 +1303,19 @@ a:hover {
     text-align: center;
     margin-bottom: 1em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
   .site-header--home .img-logo:last-child {
     margin-right: 0;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\0000394}}
 .site-body {
   margin-top: 1.618em;
   margin-bottom: 1.618em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\00003105}}
 .site-footer {
   margin-top: 3em;
   margin-bottom: 3em;
@@ -1308,12 +1323,12 @@ a:hover {
   color: #444;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\00003111}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\00003113}}
 .site-footer a {
   margin-left: 1em;
   color: inherit;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\00003117}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_site\.scss}line{font-family:\00003119}}
 .site-footer span:first-child {
   margin-left: 0;
 }
@@ -1324,126 +1339,126 @@ a:hover {
   list-style: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\000039}}
 .single > article {
   *zoom: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000318}}
 .single > article:before, .single > article:after {
   content: " ";
   display: table;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000323}}
 .single > article:after {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000320}}
 .single-header {
   background: #b53f87;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000323}}
 .single-header > .pad {
   *zoom: 1;
   max-width: 55.5555556em;
   margin-left: auto;
   margin-right: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000318}}
 .single-header > .pad:before, .single-header > .pad:after {
   content: " ";
   display: table;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000323}}
 .single-header > .pad:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000327}}
 .single-header h1 {
   margin-left: 8.5106383%;
-  display: block;
   float: left;
+  display: block;
   margin-right: 2.1276596%;
   width: 82.9787234%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
 .single-header h1:last-child {
   margin-right: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000339}}
 .single-content {
   *zoom: 1;
   max-width: 55.5555556em;
   margin-left: auto;
   margin-right: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000318}}
 .single-content:before, .single-content:after {
   content: " ";
   display: table;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000323}}
 .single-content:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000342}}
 .single-content p {
   text-align: justify;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000350}}
 .single-content > .pad {
   margin-top: 2em;
   margin-left: 17.0212766%;
-  display: block;
   float: left;
+  display: block;
   margin-right: 2.1276596%;
   width: 65.9574468%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
 .single-content > .pad:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 850px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000350}}
   .single-content > .pad {
     margin-left: 8.5106383%;
-    display: block;
     float: left;
+    display: block;
     margin-right: 2.1276596%;
     width: 82.9787234%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
   .single-content > .pad:last-child {
     margin-right: 0;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000364}}
 .single-footer {
   margin-top: 1em;
   margin-bottom: 1em;
   color: #444;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000370}}
 .single-footer > .pad {
   *zoom: 1;
   max-width: 55.5555556em;
   margin-left: auto;
   margin-right: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000318}}
 .single-footer > .pad:before, .single-footer > .pad:after {
   content: " ";
   display: table;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000323}}
 .single-footer > .pad:after {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000377}}
 .single-comments {
   margin-top: 3em;
   *zoom: 1;
@@ -1451,37 +1466,37 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000318}}
 .single-comments:before, .single-comments:after {
   content: " ";
   display: table;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/bourbon\/app\/assets\/stylesheets\/addons\/_clearfix\.scss}line{font-family:\0000323}}
 .single-comments:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000382}}
 .single-comments > .pad {
   margin-left: 17.0212766%;
-  display: block;
   float: left;
+  display: block;
   margin-right: 2.1276596%;
   width: 65.9574468%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
 .single-comments > .pad:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 850px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000382}}
   .single-comments > .pad {
     margin-left: 8.5106383%;
-    display: block;
     float: left;
+    display: block;
     margin-right: 2.1276596%;
     width: 82.9787234%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/style\/sass\/vendor\/neat\/grid\/_span-columns\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wp-wolfiezero\/content\/themes\/v1\/bower_components\/neat\/app\/assets\/stylesheets\/grid\/_span-columns\.scss}line{font-family:\0000340}}
   .single-comments > .pad:last-child {
     margin-right: 0;
   }

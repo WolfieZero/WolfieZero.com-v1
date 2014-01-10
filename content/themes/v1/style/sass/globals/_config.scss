@@ -42,7 +42,7 @@ $dir-img:          '../../img';
 // ----------------------------------------------------------------------------
 
 // We need this before the file is loaded
-@import '../vendor/neat/neat-helpers';
+@import 'neat/app/assets/stylesheets/neat-helpers';
 
 $column:           60px;
 $gutter:           20px;
