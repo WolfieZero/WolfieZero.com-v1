@@ -12,6 +12,7 @@
 
 add_action( 'wp_enqueue_scripts', 'enqueue_files' );
 add_action( 'init', 'navigation' );
+add_action( 'init', 'theme_support' );
 
 
 // ----------------------------------------------------------------------------
@@ -26,6 +27,12 @@ add_filter( 'script_loader_src', 'remove_enqueued_ver', 10, 2 );
 // Functions
 // ----------------------------------------------------------------------------
 
+
+function theme_support() {
+
+    add_theme_support( 'post-thumbnails' );
+
+}
 
 /**
  * Enqueues both style and script files used for the theme
