@@ -1,5 +1,4 @@
-/*! WolfieZero.com - v1.0.0 - 2014-01-10 *//*global jQuery */
-/*!
+/*! WolfieZero.com - v1.0.0 - 2014-01-11 *//*!
 * FitText.js 1.1
 *
 * Copyright 2011, Dave Rupert http://daverupert.com
@@ -8,44 +7,4 @@
 *
 * Date: Thu May 05 14:23:00 2011 -0600
 */
-/*global $*/
-"use strict";
-
-!function($) {
-    $.fn.fitText = function(kompressor, options) {
-        // Setup options
-        var compressor = kompressor || 1, settings = $.extend({
-            minFontSize: Number.NEGATIVE_INFINITY,
-            maxFontSize: Number.POSITIVE_INFINITY
-        }, options);
-        return this.each(function() {
-            // Store the object
-            var $this = $(this), resizer = function() {
-                $this.css("font-size", Math.max(Math.min($this.width() / (10 * compressor), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-            };
-            // Call once to set.
-            resizer(), // Call on resize. Opera debounces their resize by default.
-            $(window).on("resize.fittext orientationchange.fittext", resizer);
-        });
-    };
-}(jQuery);
-
-// ============================================================================
-// Main JavaScript
-// ============================================================================
-var s, WolfieZero = {
-    settings: {},
-    init: function() {
-        s = this.settings, this.fitText();
-    },
-    fitText: function() {
-        $(".site__title--home").fitText(.8);
-    }
-};
-
-// ----------------------------------------------------------------------------
-// Load when ready
-// ----------------------------------------------------------------------------
-$(document).ready(function() {
-    WolfieZero.init();
-});
+"use strict";!function(a){a.fn.fitText=function(b,c){var d=b||1,e=a.extend({minFontSize:Number.NEGATIVE_INFINITY,maxFontSize:Number.POSITIVE_INFINITY},c);return this.each(function(){var b=a(this),c=function(){b.css("font-size",Math.max(Math.min(b.width()/(10*d),parseFloat(e.maxFontSize)),parseFloat(e.minFontSize)))};c(),a(window).on("resize.fittext orientationchange.fittext",c)})}}(jQuery);var s,WolfieZero={settings:{},init:function(){s=this.settings,this.fitText()},fitText:function(){$(".site__title--home").fitText(.8)}};$(document).ready(function(){WolfieZero.init()});

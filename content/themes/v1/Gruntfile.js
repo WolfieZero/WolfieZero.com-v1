@@ -41,6 +41,7 @@ module.exports = function (grunt) {
                     style: 'compressed',
                     precision: 7,
                     noCache: true,
+                    loadPath: ['./bower_components'],
                     banner:
                         '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
                         '<%= grunt.template.today("yyyy-mm-dd") %> */'

@@ -48,6 +48,7 @@ function enqueue_files() {
 
     // Fonts
     wp_enqueue_style( 'fontawesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' );
+#    wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Ubuntu:300,400,700' );
 
     // Main Style
     wp_enqueue_style( 'main', get_latest_css_file() );
