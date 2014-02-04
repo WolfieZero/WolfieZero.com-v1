@@ -50,7 +50,7 @@ get_header(); ?>
     ?>
 </div>
 
-<section class="articles">
+<section class="articles" id="blogs">
 
     <?php
         wp_reset_query();

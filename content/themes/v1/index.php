@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-<section class="articles">
+<section class="articles" id="blogs">
 
     <?php get_template_part( 'partial/loop', 'post' ); ?>
 

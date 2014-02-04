@@ -30,6 +30,7 @@ module.exports = function( grunt ) {
                     style: 'expanded',
                     precision: 7,
                     debugInfo: true,
+                    quiet: true,
                     loadPath: ['./bower_components']
                 },
                 files: {

@@ -1,0 +1,24 @@
+
+@mixin parallax-init {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  body {
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    @include perspective(1px);
+    @include transform-style(preserve-3d);
+  }
+}
+
+@mixin parallax($distance: 0) {
+  @include transform(
+    translateZ($distance * 1px)
+    scale(abs($distance - 1))
+  );
+  z-index: $distance * 1000;
+}

@@ -1,10 +1,10 @@
 {
 
     "script/build/main.js": [
-
         "bower_components/FitText.js/jquery.fittext.js",
         "script/dev/main.js"
+    ],
 
-    ]
+    "script/build/modernizr.js": "script/dev/modernizr.js"
 
 }
