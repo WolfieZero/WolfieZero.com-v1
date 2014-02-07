@@ -1366,7 +1366,7 @@ a:hover {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wolfiezero\.com\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000321}}
 .single__title--featured {
-  background-color: rgba(181, 63, 135, 0.9);
+  background-color: #b53f87;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/neil\/Development\/WolfieZero\.com\/wolfiezero\.com\/content\/themes\/v1\/style\/sass\/module\/_single\.scss}line{font-family:\0000324}}
 .single__title--featured:last-child {

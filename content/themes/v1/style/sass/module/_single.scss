@@ -19,7 +19,7 @@
     }
 
     .single__title--featured {
-        background-color: rgba( $color-brand, 0.9 );
+        background-color: $color-brand;
 
         &:last-child {
             margin-bottom: -0.5em;
