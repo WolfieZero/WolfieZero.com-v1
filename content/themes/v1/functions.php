@@ -21,6 +21,7 @@ add_action( 'init', 'theme_support' );
 
 add_filter( 'style_loader_src', 'remove_enqueued_ver', 10, 2 );
 add_filter( 'script_loader_src', 'remove_enqueued_ver', 10, 2 );
+add_filter( 'embed_oembed_html', 'video_embed', 10, 3) ;
 
 
 // ----------------------------------------------------------------------------
@@ -28,11 +29,33 @@ add_filter( 'script_loader_src', 'remove_enqueued_ver', 10, 2 );
 // ----------------------------------------------------------------------------
 
 
+/**
+ * Adds theme support
+ *
+ * @return  null
+ */
 function theme_support() {
 
     add_theme_support( 'post-thumbnails' );
 
 }
+
+
+/**
+ * Takes a embed URL and alters the default action
+ *
+ * @param   string  $original_html  HTML of WordPress default action
+ * @param   string  $url            URL of embed
+ * @param   array   $args           Aguments
+ *
+ * @return  string
+ */
+function video_embed( $original_html, $url, $args ) {
+
+    return '<div class="single__embed">' . $original_html . '</div>';
+
+}
+
 
 /**
  * Enqueues both style and script files used for the theme
@@ -48,7 +71,7 @@ function enqueue_files() {
 
     // Fonts
     wp_enqueue_style( 'fontawesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' );
-#    wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Ubuntu:300,400,700' );
+    wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Ubuntu:300,400,700|Source+Code+Pro:300' );
 
     // Main Style
     wp_enqueue_style( 'main', get_latest_css_file() );

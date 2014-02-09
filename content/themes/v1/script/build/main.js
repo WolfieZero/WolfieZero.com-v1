@@ -1,4 +1,4 @@
-/*! WolfieZero.com - v1.1.0 - 2014-02-07 *//*!
+/*! WolfieZero.com - v1.1.0 - 2014-02-09 *//*!
 * FitText.js 1.1
 *
 * Copyright 2011, Dave Rupert http://daverupert.com

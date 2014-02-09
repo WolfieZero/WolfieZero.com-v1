@@ -1,0 +1,28 @@
+
+// ============================================================================
+// Code
+// ============================================================================
+
+pre {
+    font-size: 0.8em;
+    background: #FEFEFE;
+    color: #2C303C;
+    padding: 1em;
+    margin: 1em -1em;
+    line-height: 1.2em;
+    overflow-x: scroll;
+    border-top: 3px solid #2C303C;
+    border-bottom: 3px solid #2C303C;
+}
+
+code {
+    font-family: 'Source Code Pro';
+    font-weight: 300;
+}
+
+p > code {
+    background: #333;
+    display: inline-block;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}

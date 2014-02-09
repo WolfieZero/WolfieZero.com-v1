@@ -9,7 +9,6 @@
 // ----------------------------------------------------------------------------
 
 @import 'globals/functions';
-@import 'globals/mixins/google-font';
 @import 'globals/mixins/parallax';
 @import 'globals/config';
 
@@ -28,7 +27,6 @@
 // ----------------------------------------------------------------------------
 
 @import '../fonts/sansation/sansation';
-@include google-font( Ubuntu, ( 300, 400, 700 ) );
 
 
 // ----------------------------------------------------------------------------
@@ -50,4 +48,5 @@
 @import 'module/single';
 @import 'module/video';
 @import 'module/embed';
+@import 'module/code';
 @import 'module/wp';
