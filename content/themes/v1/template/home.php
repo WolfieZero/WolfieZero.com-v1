@@ -26,7 +26,7 @@ get_header(); ?>
                     <i class="fa fa-linkedin social__ico--linkedin">LinkedIn</i></a>
                 <a href="https://www.youtube.com/user/WolfieZero" rel="external" class="social__ico--youtube-bg">
                     <i class="fa fa-youtube social__ico--youtube">YouTube</i></a>
-                <a href="http://codeschool.com/user/28884" rel="external" class="social__ico--codeschool-bg">
+                <a href="http://codeschool.com/users/28884" rel="external" class="social__ico--codeschool-bg">
                     <i class="fa fa-code social__ico--codeschool">Code School</i></a>
                 <a href="http://stackexchange.com/users/118762/wolfiezero?tab=accounts" class="social__ico--stack-exchange-bg">
                     <i class="fa fa-stack-exchange social__ico--stack-exchange">Stack Exchange</i></a>
