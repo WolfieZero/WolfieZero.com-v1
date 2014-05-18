@@ -14,7 +14,7 @@
     },
     "require": {
         "johnpbloch/wordpress": "*",
-        "wpackagist/wp-super-cache": "*",
+        "wpackagist/lite-cache": "*",
         "wpackagist/wordpress-importer": "*",
         "wpackagist/google-analytics-for-wordpress": "*",
         "wpackagist/addthis": "*",
