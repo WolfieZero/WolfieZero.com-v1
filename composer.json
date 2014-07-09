@@ -20,7 +20,7 @@
         "wpackagist/addthis": "*",
         "wpackagist/disqus-comment-system": "*",
         "wpackagist/wp-markdown": "*",
-        "wpackagist/jetpack": "*"
+        "wpackagist/jetpack": "3.0.*"
     },
     "require-dev"  : {
         "wpackagist/developer": "*",
